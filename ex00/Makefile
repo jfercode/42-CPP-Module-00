@@ -6,18 +6,17 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 # Directories and files
-SRC			= main.cpp
+SRC			= megaphone.cpp
 OBJ			= $(SRC:.cpp=.o)
 
 all:	$(NAME)
-
-	$(NAME): $(OBJ)
-		$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -rf $(OBJ)
 
-fclean: clean
+fclean:	clean
 	rm -rf $(NAME)
 
 re:	fclean all
