@@ -3,19 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaferna2 <jaferna2@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: jaferna2 < jaferna2@student.42madrid.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:35:16 by jaferna2          #+#    #+#             */
-/*   Updated: 2025/04/29 19:39:10 by jaferna2         ###   ########.fr       */
+/*   Updated: 2025/05/02 12:39:03 by jaferna2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/PhoneBook.hpp"
 
 #include <iostream>
-#include <iomanip> 
+#include <iomanip>
+#include <string>
 
 PhoneBook::PhoneBook() : contactNum(0) {}
+
+std::string		PhoneBook::truncateStr(std::string str, int x) const
+{
+	int	size;
+
+	size = str.length();
+	if (size <= x)
+		return (str);
+	else
+		return (str.substr(0, x) + ".");
+}
+
 
 void	PhoneBook::addContacts(const Contact& contact)
 {
@@ -36,13 +49,12 @@ void	PhoneBook::searchContacts() const
 			  << std::setw(10) << "Last Name" << "|"
 			  << std::setw(10) << "Nickname" << "|"
 			  << std::endl;
-	for (int i = 0; i < contactNum; ++i)
+	for (int i = 0; i < contactNum; i++)
 	{
-		std::cout << std::setw(10) << contacts[i].getFirstName() << "|"
-				  << std::setw(10) << contacts[i].getLastName() << "|"
-				  << std::setw(10) << contacts[i].getNickname() << "|"
-				  << std::setw(10) << contacts[i].getPhoneNumber() << "|"
-				  << std::setw(10) << contacts[i].getDarkestSecret() << "|"
+		std::cout << std::setw(10) << i << "|"
+				  << std::setw(10) << truncateStr(contacts[i].getFirstName(), 8) << "|"
+				  << std::setw(10) << truncateStr(contacts[i].getLastName(), 8) << "|"
+				  << std::setw(10) << truncateStr(contacts[i].getNickname(), 8) << "|" 
 				  << std::endl;
 	}
 }
@@ -60,4 +72,9 @@ void	PhoneBook::printContactDetails(int indx) const
 	std::cout << "Phone Number: " << c.getPhoneNumber() << std::endl;
 	std::cout << "Darkest Secret: " << c.getDarkestSecret() << std::endl;
 	
+}
+
+int		PhoneBook::getContactNum() const
+{
+	return contactNum;	
 }
