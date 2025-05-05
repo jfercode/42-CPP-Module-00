@@ -1,12 +1,12 @@
 # Name
-NAME = phoneBook
+NAME = tests
 
 # Compiler & flags
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -Iinclude
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g -Iinclude
 
 # Source files
-SRC = source/PhoneBook.cpp source/Contact.cpp main.cpp
+SRC = source/Account.cpp tests.cpp
 OBJ = $(SRC:.cpp=.o)
 
 # Rules
