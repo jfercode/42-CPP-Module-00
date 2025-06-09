@@ -8,14 +8,14 @@
 
 ## 📚 Tabla de Contenidos
 
-1. [Namespaces y `std::`](#1-namespaces-y-std)
-2. [Clases y Objetos](#2-clases-y-objetos)
-3. [Encapsulamiento: `private` vs `public`](#3-encapsulamiento-private-vs-public)
-4. [Constructores y Destructores](#4-constructores-y-destructores)
-5. [Métodos Miembro y `this`](#5-métodos-miembro-y-this)
-6. [Entrada y Salida con Streams](#6-entrada-y-salida-con-streams)
-7. [Errores Comunes](#7-errores-comunes)
-8. [Buenas Prácticas](#8-buenas-prácticas)
+1. [Namespaces y `std::`](#-1-namespaces-y-std)
+2. [Clases y Objetos](#-2-clases-y-objetos)
+3. [Encapsulamiento: `private` vs `public`](#-3-encapsulamiento-private-vs-public)
+4. [Constructores y Destructores](#-4-constructores-y-destructores)
+5. [Métodos Miembro y `this`](#-5-métodos-miembro-y-this)
+6. [Entrada y Salida con Streams](#-6-entrada-y-salida-con-streams)
+7. [Errores Comunes](#-7-errores-comunes)
+8. [Buenas Prácticas](#-8-buenas-prácticas)
 
 
 ---
